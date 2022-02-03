@@ -1,0 +1,41 @@
+.sub-about
+{
+	display: none;
+}
+.menu ul li a:hover .sub-about
+{
+	display: block;
+	position: absolute;
+	background: rgb(0,100,0);
+	margin-top: 15px;
+	margin-left: -15px;
+}
+
+.menu ul ul li
+{
+	background: rgb(100,0,0);
+	width: 150px;
+	margin-left: -50px;
+	margin-top: -1px;
+	display: list-item;
+	position: relative;
+	padding: 10px 10px;
+}
+
+.list ul li a
+{
+	text-decoration: none;
+	font-size: 20px;
+	color: black;
+}
+
+jdk downloading link
+
+https://www.oracle.com/in/java/technologies/javase/javase-jdk8-downloads.html
+
+
+java basic zoom link
+https://us02web.zoom.us/j/8244839064?pwd=U3RkUE1nSC9lYzZ5bWwyWXl4aUJLUT09
+
+Meeting ID: 824 483 9064
+Passcode: 12345

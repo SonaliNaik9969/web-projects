@@ -1,0 +1,144 @@
+<html>
+<head>
+<title> Facilities </title>
+</head>
+<style>
+body
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-radius;
+	font-family: sans-serif;
+}
+.container
+{
+	height: 150vh;
+	width: 100%;
+	background: #c8e87d;
+	background-position: center;
+	position: relative;
+	background-size: cover;
+}
+.logo
+{
+	font-size: 25px;
+	cursor: pointer;
+	background: transparent;
+	margin-left: 10px;
+	color: blue;
+}
+section
+{
+	padding: 10px;
+	width: 1280px;
+	margin: 20px auto;
+	
+}
+ul
+{
+	
+	display: flex;
+	
+	margin-bottom: 10px;
+	
+}
+ul li
+{
+	list-style: none;
+	background: #eee;
+	padding: 8px 20px;
+	margin: 5px;
+	letter-spacing: 1px;
+	cursor: pointer;
+}	
+ul li.active
+{
+	background: #03a9f4;
+	color: #fff;
+}
+.clg
+{
+	display: flex;
+	flex-wrap: wrap;
+}
+.clg .spacebox
+{
+	position: relative;
+	width: 300px;
+	height: 200px;
+	margin: 5px;
+}
+.clg .spacebox img
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+
+
+
+</style>
+<body>
+	<div class="container">
+		<div class="logo">
+			<h1><i> Facilities </i></h2>
+		</div>
+	<section>
+		<ul>
+			<li class="list active" data-filter="All"> All </li>
+			<li class="list" data-filter="Auditorium"> Auditorium </li>
+			<li class="list" data-filter="Canteen"> Canteen </li>
+			<li class="list" data-filter="Computer Lab"> Computer Lab </li>
+			<li class="list" data-filter="Lawn"> Lawn </li>
+			<li class="list" data-filter="Library"> Library </li>
+			<li class="list" data-filter="Seminar Hall"> Seminar Hall </li>
+		</ul>
+		
+		<div class="clg">	
+			<div class="spacebox" data-items="Auditorium"> <img src="Auditorium1.jpg"></img> </div>
+			<div class="spacebox" data-items="Canteen"> <img src="Canteen1.jpg"></img> </div>
+			<div class="spacebox" data-items="Computer Lab"> <img src="CompCenter1.jpg"></img> </div>
+			<div class="spacebox" data-items="Lawn"> <img src="Lawn1.jpg"></img> </div>
+			<div class="spacebox" data-items="Library"> <img src="Library1.jpg"></img> </div>
+			<div class="spacebox" data-items="Seminar Hall"> <img src="SemiHall1.jpg"></img> </div>
+			<div class="spacebox" data-items="Auditorium"> <img src="Auditorium2.jpg"></img> </div>
+			<div class="spacebox" data-items="Canteen"> <img src="Canteen2.jpg"></img> </div>
+			<div class="spacebox" data-items="Computer Lab"> <img src="CompCenter2.jpg"></img> </div>
+			<div class="spacebox" data-items="Lawn"> <img src="Lawn2.jpg"></img> </div>
+			<div class="spacebox" data-items="Library"> <img src="Library2.jpg"></img></div>
+			<div class="spacebox" data-items="Seminar Hall"> <img src="SemiHall2.jpg"></img> </div>
+		</div>	
+	</section>
+	<script src="https://code.jquery.com/jquery-3.6.0.js" 
+	integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" 
+	crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(document).ready(function(){
+	$('.list').click(function(){
+	
+		const value = $(this).attr('data-filter');
+		if (value == 'all')
+		{
+			$('.spacebox').show('1000');
+		}
+		else
+		{
+			$('.spacebox').not('.'+value).hide('1000');
+			$('.spacebox').filter('.'+value).show('1000');
+		}
+		})
+		
+		//add active class on selected item
+
+		$('.list').click(function(){
+				$(this).addclass('active').siblings().removeclass('active');
+		})
+  })
+  </script>
+</body>
+</html>

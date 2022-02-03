@@ -1,0 +1,99 @@
+body
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box; 
+	font-family: sans-serif;
+}
+.banner
+{
+	width: 100%;
+	height: 100vh;
+	background-image: url(backgrnd3.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.menu
+{
+	background: rgb(100,0,0);
+	width: 76%;
+	margin-top: 10px;
+	margin-right: 15px;
+	padding: 5px 8px;
+	display: flex;
+	float: right;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.logo
+{
+	width: 150px;
+	height: 150px;
+	cursor: pointer;
+	border-radius: none;
+	background: transparent;
+	margin-left: 12px;
+	margin-top: 10px;
+}
+
+.content
+{
+	width: 50%;
+	position: absolute;
+	top: 35%;
+}
+.content h1
+{
+	margin-left: 15px;
+	font-size: 40px;
+}
+.content h2
+{
+	margin-left: 40px;
+	font-size: 20px;
+}
+.content h3
+{
+	margin-left: 40px;
+	font-size: 20px;
+}
+.menu ul li
+{
+	list-style: none;
+	display: inline-block;
+	margin-right: 90px;
+	margin-top: 4px;
+}
+.menu ul li a
+{
+	text-decoration: none;
+	color: white;
+	font-size: 15px;
+	font-style: bold;
+	
+}
+.menu ul li a:hover
+{
+	color: #74cc74;
+}
+.menu ul ul
+{
+	position: absolute;
+	top: 60px;
+	display: none;
+}
+.menu ul li:hover ul
+{
+	display: block;
+}
+.menu ul ul li
+{
+	background: rgb(100,0,0);
+	width: 150px;
+	margin-left: -50px;
+	margin-top: -1px;
+	display: list-item;
+	position: relative;
+	padding: 10px 10px;
+}

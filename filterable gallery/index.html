@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filterable Gallery</title>
+    <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+   <section>
+       <ul>
+           <li class="list active" data-filter="All">All</li>
+           <li class="list" data-filter="Mobile">Mobile</li>
+           <li class="list" data-filter="Earphone">Earphone</li>
+           <li class="list" data-filter="Camera">Camera</li>
+           <li class="list" data-filter="Shoe">Shoe</li>
+           <li class="list" data-filter="Watch">Watch</li>
+       </ul>
+
+       <div class="picture">
+           <div class="items" data-item="Mobile"><img src="/filterable gallery/img/mob1.png" alt=""></div>
+           <div class="items" data-item="Earphone"><img src="/filterable gallery/img/earph1.jpg" alt=""></div>
+           <div class="items" data-item="Camera"><img src="/filterable gallery/img/cam1.jpg" alt=""></div>
+           <div class="items" data-item="Shoe"><img src="/filterable gallery/img/shoe1.jpg" alt=""></div>
+           <div class="items" data-item="Watch"><img src="/filterable gallery/img/watch1.jpeg" alt=""></div>
+
+           <div class="items" data-item="Mobile"><img src="/filterable gallery/img/mob2.jpg" alt=""></div>
+           <div class="items" data-item="Earphone"><img src="/filterable gallery/img/earph2.jpg" alt=""></div>
+           <div class="items" data-item="Camera"><img src="/filterable gallery/img/cam2.png" alt=""></div>
+           <div class="items" data-item="Shoe"><img src="/filterable gallery/img/shoe2.jpg" alt=""></div>
+           <div class="items" data-item="Watch"><img src="/filterable gallery/img/watch2.jpg" alt=""></div>
+
+           <div class="items" data-item="Mobile"><img src="/filterable gallery/img/mob3.png" alt=""></div>
+           <div class="items" data-item="Earphone"><img src="/filterable gallery/img/earph3.jpg" alt=""></div>
+           <div class="items" data-item="Camera"><img src="/filterable gallery/img/cam3.png" alt=""></div>
+           <div class="items" data-item="Shoe"><img src="/filterable gallery/img/shoe3.jpg" alt=""></div>
+           <div class="items" data-item="Watch"><img src="/filterable gallery/img/watch3.jpg" alt=""></div>
+
+           <div class="items" data-item="Mobile"><img src="/filterable gallery/img/mob4.png" alt=""></div>
+           <div class="items" data-item="Earphone"><img src="/filterable gallery/img/earph4.webp" alt=""></div>
+
+           <div class="items" data-item="Mobile"><img src="/filterable gallery/img/mob5.png" alt=""></div>
+           <div class="items" data-item="Earphone"><img src="/filterable gallery/img/earph5.jpg" alt=""></div>
+       </div>
+   </section> 
+   <script>
+       let list = document.querySelectorAll('.list');
+       let items = document.querySelectorAll('.items');
+       for(let i=0; i<=list.length; i++)
+       {
+           list[i].addEventListener('click', function(){
+               for (let j = 0; j < list.length; j++) {
+                   list[j].classList.remove('active');
+                   
+               }
+               this.classList.add('active');
+               let dataFilter = this.getAttribute('data-filter');
+               for (let k = 0; k < items.length; k++) {
+                   items[k].classList.remove('active');
+                   items[k].classList.add('hide');
+
+
+                   if(items[k].getAttribute('data-item') == dataFilter || dataFilter == "all")
+                   {
+                        items[k].classList.remove('hide');
+                       items[k].classList.add('active');
+
+                   }
+                   
+               }
+           })
+       }
+   </script>
+</body>
+</html>

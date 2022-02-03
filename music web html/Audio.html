@@ -1,0 +1,226 @@
+<html>
+<head>
+<title> AUDIOS </title>
+</head>
+<style>
+body
+{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+.container
+{
+	height: 100vh;
+	width: 100%;
+	background-image: url(musicbgrnd2.jpg);
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
+.logo
+{
+	width: 160px;
+	height: 100px;
+	cursor: pointer;
+	background: transparent;
+	margin-top: 6px;
+	margin-left: 6px;
+}
+.info
+{
+	width: 100%;
+	position: absolute;
+	top: 30%;
+}
+.info h1
+{
+	margin-left: 4%;
+	font-size: 40px;
+	margin-top: -20px;
+	color: red;
+}	
+.info h2
+{
+	margin-left: 4%;
+	font-size: 30px;
+	margin-top: 30px;
+	color: #ffffff;
+}
+.micon
+{
+	width: 100%;
+	position: absolute;
+	top: 40%;
+}
+
+.micon h1
+{
+	margin-left: 4%;
+	font-size: 25px;
+	margin-top: 50px;
+	color: #ffffff;
+}
+.micon h2
+{
+	margin-left: 4%;
+	font-size: 25px;
+	margin-top: 20px;
+	color: #ffffff;
+}
+.micon h3
+{
+	margin-left: 4%;
+	font-size: 25px;
+	margin-top: 20px;
+	color: #ffffff;
+}
+.micon h4
+{
+	margin-left: 4%;
+	font-size: 25px;
+	margin-top: 20px;
+	color: #ffffff;
+}
+#button1
+{
+	width: 50px;
+	cursor: pointer;
+	margin-left: 25%;
+	margin-top: -60px;
+}
+#button2
+{
+	width: 50px;
+	cursor: pointer;
+	margin-left: 25%;
+	margin-top: -60px;
+}
+#button3
+{
+	width: 50px;
+	cursor: pointer;
+	margin-left: 25%;
+	margin-top: -60px;
+}
+#button4
+{
+	width: 50px;
+	cursor: pointer;
+	margin-left: 25%;
+	margin-top: -60px;
+}
+</style>
+<body>
+	<div class="container">
+	<image src="musiclogo2.png" class="logo">
+		<div class="micon">
+			<h1>जगनं ह्ये न्यारं झालं जी...</h1>
+			<image src="playbutton.png" id="button1">
+			<h2>आईची आरती...</h2>
+			<image src="playbutton.png" id="button2">
+			<h3>सुरात आलं उरात आलं...</h3>
+			<image src="playbutton.png" id="button3">
+			<h4>शिवराज्याभिषेक गीत...</h4>
+			<image src="playbutton.png" id="button4">
+		</div>
+	</div>		
+	
+	<div class="info">
+		<h1> HIRKANI SONGS </h1>
+		<h2><font color=black>CLICK HERE TO LISTEN</font></h2>
+	</div>
+			
+	<audio id="mysong1">
+		<source src="hirkani.mpeg">
+	</audio>
+	
+	<script>
+		var mysong1 = document.getElementById("mysong1");
+		var button1 = document.getElementById("button1");
+		
+		button1.onclick = function()
+		{
+			if(mysong1.paused)
+			{
+				mysong1.play();
+				button1.src = "pausebutton.jpg";
+			}
+			else
+			{
+				mysong1.pause();
+				button1.src = "playbutton.png";
+			}
+		}
+	</script>
+	
+	<audio id="mysong2">
+		<source src="AaichiAarti.mp3">
+	</audio>
+		
+	<script>
+		var mysong2 = document.getElementById("mysong2");
+		var button2 = document.getElementById("button2");
+		
+		button2.onclick = function()
+		{
+			if(mysong2.paused)
+			{
+				mysong2.play();
+				button2.src = "pausebutton.jpg";
+			}
+			else
+			{
+				mysong2.pause();
+				button2.src = "playbutton.png";
+			}
+		}
+	</script>
+	
+	<audio id="mysong3">
+		<source src="SuratAla.mp3">
+	</audio>
+	
+	<script>
+		var mysong3 = document.getElementById("mysong3");
+		var button3 = document.getElementById("button3");
+		
+		button3.onclick = function()
+		{
+			if(mysong3.paused)
+			{
+				mysong3.play();
+				button3.src = "pausebutton.jpg";
+			}
+			else
+			{
+				mysong3.pause();
+				button3.src = "playbutton.png";
+			}
+		}
+	</script>
+	
+	<audio id="mysong4">
+		<source src="ShivrajyabhishekGeet.mp3">
+	</audio>
+	
+	<script>
+		var mysong4 = document.getElementById("mysong4");
+		var button4 = document.getElementById("button4");
+		
+		button4.onclick = function()
+		{
+			if(mysong4.paused)
+			{
+				mysong4.play();
+				button4.src = "pausebutton.jpg";
+			}
+			else
+			{
+				mysong4.pause();
+				button4.src = "playbutton.png";
+			}
+		}
+	</script>
+
+</body>
